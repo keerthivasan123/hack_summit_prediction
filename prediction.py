@@ -20,7 +20,7 @@ def getPrediction(productCode, inputDate):
     from sklearn.model_selection import GridSearchCV
     from sklearn.preprocessing import MinMaxScaler
     scaler = MinMaxScaler(feature_range=(0, 1))
-    cnx=ap.connect(r'C:\Users\Jenith\Downloads\inventory(1).db')
+    cnx=ap.connect(r'C:\Users\keerthivasan\Desktop\hack_summit_prediction\inventory.db')
     df=pd.read_sql_query("Select * from outbound",cnx)
     df.IssueDate=df.IssueDate.astype('datetime64')
     a=df.loc[df['Id'] == 'P2002']
@@ -45,14 +45,17 @@ def getPrediction(productCode, inputDate):
 if __name__ == "__main__":
     productCode = "P2002"
     inputDate = "2020-11-03"
-    print(getPrediction(productCode, "2020-01-03"))
-    print(getPrediction(productCode, "2020-02-04"))
-    print(getPrediction(productCode, "2020-03-05"))
-    print(getPrediction(productCode, "2020-04-06"))
-    print(getPrediction(productCode, "2020-05-07"))
-    print(getPrediction(productCode, "2020-06-08"))
-    print(getPrediction(productCode, "2020-07-09"))
-    print(getPrediction(productCode, "2020-08-10"))
-    print(getPrediction(productCode, "2020-09-11"))
-    print(getPrediction(productCode, "2020-10-12"))
-    print(getPrediction(productCode, "2021-11-03"))
+    i=-1
+    arr=[]
+    a=getPrediction(productCode, "2020-01-03")
+    print(a)
+    # print(getPrediction(productCode, "2020-02-04"))
+    # print(getPrediction(productCode, "2020-03-05"))
+    # print(getPrediction(productCode, "2020-04-06"))
+    # print(getPrediction(productCode, "2020-05-07"))
+    # print(getPrediction(productCode, "2020-06-08"))
+    # print(getPrediction(productCode, "2020-07-09"))
+    # print(getPrediction(productCode, "2020-08-10"))
+    # print(getPrediction(productCode, "2020-09-11"))
+    # print(getPrediction(productCode, "2020-10-12"))
+    # print(getPrediction(productCode, "2021-11-03"))
