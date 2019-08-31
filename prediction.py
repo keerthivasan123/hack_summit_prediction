@@ -46,16 +46,16 @@ if __name__ == "__main__":
     productCode = "P2002"
     inputDate = "2020-11-03"
     i=-1
-    arr=[]
-    a=getPrediction(productCode, "2020-01-03")
-    print(a)
-    # print(getPrediction(productCode, "2020-02-04"))
-    # print(getPrediction(productCode, "2020-03-05"))
-    # print(getPrediction(productCode, "2020-04-06"))
-    # print(getPrediction(productCode, "2020-05-07"))
-    # print(getPrediction(productCode, "2020-06-08"))
-    # print(getPrediction(productCode, "2020-07-09"))
-    # print(getPrediction(productCode, "2020-08-10"))
-    # print(getPrediction(productCode, "2020-09-11"))
-    # print(getPrediction(productCode, "2020-10-12"))
-    # print(getPrediction(productCode, "2021-11-03"))
+    list=[]
+    list.append(getPrediction(productCode, "2020-01-03")) 
+    list.append(getPrediction(productCode, "2020-02-04"))
+    list.append(getPrediction(productCode, "2020-03-05"))
+    list.append(getPrediction(productCode, "2020-04-06"))
+    list.append(getPrediction(productCode, "2020-05-07"))
+    list.append(getPrediction(productCode, "2020-06-08"))
+    list.append(getPrediction(productCode, "2020-07-09"))
+    list.append(getPrediction(productCode, "2020-08-10"))
+    list.append(getPrediction(productCode, "2020-09-11"))
+    list.append(getPrediction(productCode, "2020-10-12"))
+    list.append(getPrediction(productCode, "2021-11-03"))
+    print(list)
