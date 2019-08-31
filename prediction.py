@@ -45,17 +45,25 @@ def getPrediction(productCode, inputDate):
 if __name__ == "__main__":
     productCode = "P2002"
     inputDate = "2020-11-03"
-    i=-1
+    splited_date=inputDate.split('-')
     list=[]
-    list.append(getPrediction(productCode, "2020-01-03")) 
-    list.append(getPrediction(productCode, "2020-02-04"))
-    list.append(getPrediction(productCode, "2020-03-05"))
-    list.append(getPrediction(productCode, "2020-04-06"))
-    list.append(getPrediction(productCode, "2020-05-07"))
-    list.append(getPrediction(productCode, "2020-06-08"))
-    list.append(getPrediction(productCode, "2020-07-09"))
-    list.append(getPrediction(productCode, "2020-08-10"))
-    list.append(getPrediction(productCode, "2020-09-11"))
-    list.append(getPrediction(productCode, "2020-10-12"))
-    list.append(getPrediction(productCode, "2021-11-03"))
+    for x in range(10):
+        date=int(splited_date[2])+x
+        print("there are " + date + " births.")
+        # list.append(getPrediction(productCode, splited_date[0]+"-"+splited_date[1]+"-"+date))
+
+
+        # list.append(getPrediction(productCode, splited_date[0]+"-"+splited_date[1]+"-"+splited_date[2])) 
+    # list.append(getPrediction(productCode, "2020-02-04"))
+    # list.append(getPrediction(productCode, "2020-03-05"))
+    # list.append(getPrediction(productCode, "2020-04-06"))
+    # list.append(getPrediction(productCode, "2020-05-07"))
+    # list.append(getPrediction(productCode, "2020-06-08"))
+    # list.append(getPrediction(productCode, "2020-07-09"))
+    # list.append(getPrediction(productCode, "2020-08-10"))
+    # list.append(getPrediction(productCode, "2020-09-11"))
+    # list.append(getPrediction(productCode, "2020-10-12"))
+    # list.append(getPrediction(productCode, "2021-11-03"))
+    # print(splited_date
+    # print(splited_date[0])
     print(list)
